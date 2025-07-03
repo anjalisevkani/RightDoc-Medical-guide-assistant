@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RightDoc - Smart Medical Department Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #06283D;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(6, 40, 61, 0.15);
+    }
+
+    h2 {
+      color: #06283D;
+      font-family: 'Playfair Display', serif;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .info-section {
+      background: #E2F0FF;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      border-left: 6px solid #007bff;
+    }
+
+    .info-section ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #06283D;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    RightDoc
+  </header>
+
+  <main>
+    <h2>Your Personal Health Guide</h2>
+    <p>
+      RightDoc is your AI-powered virtual assistant designed to understand your health concerns and guide you to the appropriate medical specialist. Whether it's a persistent headache, skin rash, or breathing issues — just describe your symptoms, and let RightDoc suggest which department to consult.
+    </p>
+
+    <div class="info-section">
+      <h3>Why RightDoc?</h3>
+      <ul>
+        <li>Reduces misdirected medical visits</li>
+        <li>Powered by advanced AI from IBM Watson</li>
+        <li>Saves time for both patients and clinics</li>
+        <li>Simple, conversational, and accurate</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 RightDoc | Built with IBM Watson Assistant & watsonx.ai
+  </footer>
+
+  <!-- IBM Watson Assistant Web Chat -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "664a8e13-5a18-4a3e-8abd-a2d9089337cd", // Replace if needed
+      region: "au-syd", // Your region
+      serviceInstanceID: "5d5bb13f-5b85-40db-b1ea-e2d831f8acfd",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    }, 0);
+  </script>
+</body>
+</html>
